@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Locale;
 
 import entities.Product;
-//Utilizando Collections.sort()
+
 public class Program {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
@@ -17,7 +17,8 @@ public class Program {
 		list.add(new Product("Notebook", 1200.00));
 		list.add(new Product("Tablet", 450.00));
 		
-		Collections.sort(list);
+		//Utilizando o Comparator de classe separada
+		Collections.sort(list, new ProductComparator());
 		
 		for(Product p : list) {
 			System.out.println(p);
