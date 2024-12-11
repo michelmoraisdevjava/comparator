@@ -17,11 +17,9 @@ public class Program {
 		list.add(new Product("Notebook", 1200.00));
 		list.add(new Product("Tablet", 450.00));
 		
-		//Usando Comparator com expressão lambda e chaves
-		Collections.sort(list, (p1, p2) -> {
-
-			return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
-		});
+		//Usando Comparator com expressão lambda sem chaves
+		Collections.sort(list, (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase())
+		);
 		
 		for(Product p : list) {
 			System.out.println(p);
